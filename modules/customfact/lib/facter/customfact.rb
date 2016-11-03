@@ -31,7 +31,7 @@ end
 Facter.add("asfcolo") do
   setcode do
     hostname = Facter.value('hostname')
-    if hostname.include? "ubuntu1464"
+    if hostname.include? ("ubuntu1464" || "ubuntu1664")
       "vagrant"
     else
       ipadd = Facter.value('ipaddress_primary')
